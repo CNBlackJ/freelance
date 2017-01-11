@@ -1,0 +1,58 @@
+<%= stylesheet_link_tag'posts' %>
+
+<% if notice %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <p id="notice">
+      <strong>Warning!</strong>   <%= notice %>
+    </p>
+  </div>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="pull-left col-md-2">
+        <h4>
+          POSTS
+        </h5>
+      </div>
+
+      <div class="pull-right col-md-2">
+        <div class="btn-group">
+          <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body padding-0">
+    <table class="table table-hover bg-white">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Likes</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @posts.each_with_index do |post, index| %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= post.title %></td>
+            <td><%= post.category %></td>
+            <td><%= post.content %></td>
+            <td><%= post.likes %></td>
+            <td>
+                <%= link_to 'Show', post, class: 'btn btn-default' %>
+                <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-info' %>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

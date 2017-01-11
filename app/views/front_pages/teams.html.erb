@@ -1,0 +1,53 @@
+<%= render'header' %>
+<%= stylesheet_link_tag  'front_pages' %>
+
+<!-- Home-BG -->
+<section>
+	<img src="<%= image_url('home-bg.jpg') %>" class="img-responsive">
+</section>
+
+<section>
+	<div class="col-md-12 bg-white">
+		<div class="title-text">
+			<div class="text-center">
+				<h1>
+					TEAM
+				</h1>
+				<span class="h4">
+					we are together
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="row">
+		<% ['caichen.png', 'dollop.jpg', 'iiobox.jpg', 'lookfeel.jpg', 'teambition.jpg', 'vanpro.jpg', 'yiqixie.jpg', 'yizaoyiwang.jpg'].each do |image| %>
+		  <div class="col-sm-6 col-md-3 margin-top-20">
+		    <div class="thumbnail">
+		      <img class="team-brand" src="<%= image_url('teams/'+image) %>" alt="...">
+		      <div class="caption text-center">
+		        <h3><%= image.split('.')[0] %></h3>
+		        <p>
+		        	<button type="button" class="btn btn-default">
+					  <span class="fa fa-home"></span> <small>Home</small>
+					</button>
+					<button type="button" class="btn btn-default">
+					  <span class="fa fa-github"></span> <small>GitHub</small>
+					</button>
+		        </p>
+		      </div>
+		    </div>
+		  </div>
+		 <% end %>
+	</div>
+</section>
+
+<section>
+
+	<div class="col-md-12">
+		<%= render 'front_pages/bottom' %>
+	</div>
+	
+</section>

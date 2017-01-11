@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+	<div class="row">
+		<div class="pull-left col-md-2">
+			<h5>
+				New Post
+			</h5>
+		</div>
+
+		<div class="pull-right col-md-2">
+			<div class="btn-group">
+				<%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="panel-body">
+    <%= render 'form', post: @post %>
+  </div>
+</div>

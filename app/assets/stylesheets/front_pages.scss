@@ -1,0 +1,102 @@
+// Place all the styles related to the FrontPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// index.html
+.discuss-title .talk-title .job-title{
+	margin-top: 42px;
+}
+
+.leave-comment{
+
+}
+
+.pedding-10 {
+	padding: 10px
+}
+
+// operation-panel
+.operation-panel{
+	position: fixed;
+	overflow-x: auto;
+	width: 260px;
+}
+
+// discuss/html
+.bg-white{
+	background-color: white;
+}
+
+.padding-12{
+	padding: 12px
+}
+
+.margin-bottom-20{
+	margin-bottom: 20px;
+}
+
+.label-extend{
+	padding: 10px;
+	font-size: 75%;
+	border-radius: 2em;
+}
+
+.discuss-action{
+	font-size: 75%px;
+	color: gray;
+	padding: 16px;
+}
+
+.btn-like{
+	width: 100%;
+}
+
+.fa-5{
+	font-size: 5em;
+}
+
+.btn-focus{
+	padding: 6px 12px;
+}
+
+.padding-bottom-10{
+	padding-bottom: 10px;
+}
+
+.width-42{
+	width: 45px;
+	height: 45px;
+}
+
+.padding-l-r-5{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+//team.html
+.margin-top-50{
+	margin-top: 50px;
+}
+
+.title-text{
+	left: 50%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.title-border{
+	border-bottom: 1px solid gray;
+}
+
+.margin-top-20{
+	margin-top: 20px;
+}
+
+.fa-3{
+	font-size: 3em;
+}
+
+.team-brand{
+	border-bottom: 1px solid #efefef;
+}

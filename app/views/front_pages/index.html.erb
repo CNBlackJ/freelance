@@ -1,0 +1,123 @@
+<%= stylesheet_link_tag  'front_pages' %>
+<%= render 'front_pages/header' %>
+
+<!-- Home-BG -->
+<section>
+	<img src="<%= image_url('home-bg.jpg') %>" class="img-responsive">
+</section>
+
+<!-- talk&&discuss -->
+<section class="section">
+	<!-- talk -->
+	<div class="col-md-8">
+		<h3 class="talk-title">Talk</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('talk1.jpg') %>">
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('talk2.jpg') %>">
+				</a>
+			</div>
+
+			<div class="col-md-6">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('talk3.jpg') %>">
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('talk4.jpg') %>">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- discuss -->
+	<div class="col-md-4">
+		<h3 class="discuss-title">Discuss</h3>
+		<div>
+			<ul class="list-group">
+				<% @discuss_titles.each do |title| %>
+				  <li class="list-group-item">
+				  	<a href="#"><%= title %></a>
+				  </li>
+			    <% end %>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- CITY -->
+<section class="section">
+	<div class="col-md-12">
+		<h3 class="talk-title">City</h3>
+		<div class="row">
+			<div class="col-md-3">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('city1.jpg') %>">
+				</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('city2.jpg') %>">
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('city3.jpg') %>">
+				</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="thumbnail">
+					<img src="<%= image_url('city4.jpg') %>">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Job -->
+<section class="section">
+
+	<div class="col-md-12">
+		<h3 class="city-title">
+			Jobs
+		</h3>
+
+		<% (0..2).each do |i| %>
+			<div class="col-md-4">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  <% (0..2).each do |m| %>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#<%= "#{i}-#{m}" %>" aria-expanded="true" aria-controls="<%= "#{i}-#{m}" %>">
+					          Collapsible Group Item # <%= "#{i}-#{m}" %>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="<%= "#{i}-#{m}" %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit
+					      </div>
+					    </div>
+					  </div>
+					  <% end %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</section>
+
+<section>
+
+	<div class="col-md-12">
+		<%= render 'front_pages/bottom' %>
+	</div>
+	
+</section>

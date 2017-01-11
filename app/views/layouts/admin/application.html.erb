@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freelance</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="bg-color">
+  	<section class="section">
+      <div class="col-md-2">
+        <%= render'layouts/admin/header' %>
+      </div>
+      <div class="col-md-10">
+        <%= yield %>      
+      </div> 
+    </section>
+  </body>
+</html>

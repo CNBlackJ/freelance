@@ -1,0 +1,143 @@
+<%= stylesheet_link_tag  'front_pages' %>
+<%= render 'front_pages/header' %>
+
+<section class="section">
+	<div class="col-md-10 margin-bottom-20">
+		<div class="bg-white">
+			<div class="padding-12">
+				<span class="label label-primary label-extend">School</span>
+				<span class="label label-primary label-extend">Information(IT)</span>
+				<span class="label label-primary label-extend">Research</span>
+				<span class="label label-primary label-extend">Part-time-job</span>
+				<span class="label label-primary label-extend">Phone</span>
+			</div>
+
+			<div class="padding-12">
+				<h3>
+					Python爬虫实战入门一：工具准备
+				</h3>
+				<blockquote>
+					<p>
+						不需要过多过深的Python知识，仅此而已。
+						个人推荐《Python简明教程》http://www.kuqin.com/abyteofpython_cn/、Python官方的《Python教程》http://python.usyiyi.cn/translate/python_352/tutorial/index.html
+						如果需要PDF版Python入门资料，可以关注我的微信公众号：州的先生，回复关键字：python入门资料
+
+						作者：Lerther
+						链接：https://zhuanlan.zhihu.com/p/24706729
+						来源：知乎
+						著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+					</p>
+				</blockquote>
+				<div>
+					<a href="#" class="discuss-action">
+						<li class="fa fa-comments-o"></li>
+						<span>comments(92)</span>
+					</a>
+					<a href="#" class="discuss-action">
+						<li class="fa fa-share-alt"></li>
+						<span>share(30)</span>
+					</a>
+					<a href="#" class="discuss-action">
+						<li class="fa fa-send"></li>
+						<span>invite(2)</span>
+					</a>
+					<a href="#" class="discuss-action">
+						<li class="fa fa-ellipsis-h"></li>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="operation-panel bg-white">
+			<div class="padding-12">
+				<a href="#" class="btn btn-default btn-lg btn-like">
+					<li class="fa fa-arrow-up"></li>
+				</a>
+				<hr>
+					<div class="text-center">
+						<div>
+							<a href="#" class="btn">
+								<li class="fa fa-heart-o fa-5 padding-bottom-10"></li>						
+							</a>
+							<br>
+							<span>10 LIKES</span>
+						</div>
+						<br>					
+						<a href="#" class="btn btn-default btn-focus">
+							<li class="fa fa-eye"></li>
+							<span>focus</span>
+						</a>
+						<a href="#" class="btn btn-default btn-focus">
+							<li class="fa fa-tag"></li>
+							<span>tagss</span>
+						</a>
+					</div>
+				<hr>
+				<a href="#" class="btn btn-default btn-lg btn-like">
+					<li class="fa fa-arrow-down"></li>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="col-md-10">
+		<div class="bg-white">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">
+			    	Comments
+			    	<div class="pull-right">
+			    		<a class="fa fa-sort-desc">
+			    			desc
+			    		</a>
+			    	</div>
+			    </h3>
+			  </div>
+			  <div class="panel-body">
+			  	<% (0..5).each do |i| %>
+				    <div class="media">
+					  <a class="media-left" href="#">
+					    <img src="<%= image_url('peoples/people1.jpg') %>" class="width-42">
+					  </a>
+					  <div class="media-body">
+					    <div class="row">
+					    	<div class="col-md-4">
+								<h4 class="media-heading">
+									<small>#<%= i + 1 %> </small>Jacky
+								</h4>	
+					    	</div>
+					    	<div class="col-md-3 pull-right">
+					    		<ul class="list-inline text-center">
+									<a href="#" class="">
+										<li class="fa fa-mail-reply padding-l-r-5"></li>
+									</a>
+									<a href="#" class="">
+										<li class="fa fa-heart padding-l-r-5"></li>
+									</a>
+								</ul>
+					    	</div>
+					    </div>
+					    <p>
+					    	借道问下，这个gem包是否线程安全？因为一个项目里面有用，puma做server，有并发量大的场景。
+					    </p>
+					  </div>
+					</div>
+					<hr>
+				<% end %>
+			  </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+
+	<div class="col-md-12">
+		<%= render 'front_pages/bottom' %>
+	</div>
+	
+</section>

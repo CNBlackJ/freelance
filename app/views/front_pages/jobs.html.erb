@@ -1,0 +1,121 @@
+<%= render'header' %>
+<%= stylesheet_link_tag 'jobs' %>
+
+<!-- Home-BG -->
+<section>
+	<img src="<%= image_url('home-bg.jpg') %>" class="img-responsive margin-bottom-25">
+</section>
+
+<section class="section">
+	<div class="col-md-9">
+		<div class="bg-white">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">
+			    	Jobs
+			    	<div class="pull-right">
+			    		<a class="fa fa-sort-desc">
+			    			desc
+			    		</a>
+			    	</div>
+			    </h3>
+			  </div>
+			  <div class="panel-body">
+			  	<% (0..5).each do |i| %>
+			  		<div class="row">
+				  		<div class="media col-md-10">
+						  <a class="media-left" href="#">
+						    <img src="<%= image_url('peoples/people1.jpg') %>" class="width-52">
+						  </a>
+						  <div class="media-body">
+						    <div class="row">
+						    	<div class="col-md-12">
+									<h4 class="media-heading">
+										<small>#<%= i + 1 %> </small>Recruit
+										<span>
+											[GZ] XO Group ruby on rails software engineer
+										</span>
+									</h4>	
+						    	</div>
+						    </div>
+						    <p>
+						    	借道问下，这个gem包是否线程安全？因为一个项目里面有用，puma做server，有并发量大的场景。
+						    </p>
+						  </div>
+						</div>
+						<div class="col-md-2 text-center">
+							<a href="#"><span class="badge">42</span></a>
+					   	</div>
+			  		</div>
+			  		<hr>
+				<% end %>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<!-- new topic -->
+		<div class="margin-bottom-25">
+			<a href="#" class="btn btn-default btn-lg width-100">
+				<li class="fa fa-ticket"></li>
+				<span>New Topic</span>
+			</a>
+		</div>
+
+		<!-- Tips -->
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  	<li class="fa fa-tags"></li>
+		  	<span>Tips</span>
+		  </div>
+		  <div class="panel-body">
+		    喜欢数量达到 5 个以上的帖子将会列入 “优质帖子” 列表，所以，如果你觉得某个帖子不错的话，别忘了点击 “喜欢” 支持一下哦！
+		  </div>
+		</div>
+
+		<!-- Resource -->
+		<div class="panel panel-default margin-bottom-25">
+		  <div class="panel-heading">
+		  	<li class="fa fa-info-circle"></li>
+		  	<span>Recommended Resources</span>
+		  </div>
+		  <!-- List group -->
+		  <ul class="list-group">
+		  	<% ['Ruby Mirro', 'RubyGems Mirro', 'Rvm Source', 'Node.js', 'Bootstrap'].each do |resource| %>
+			  	<li class="list-group-item">
+			  		<a href="#">
+			  			<%= resource %>
+			  		</a>
+			  	</li>
+		  	<% end %>
+		  </ul>
+		</div>
+
+		<!-- Community -->
+		<div class="panel panel-default margin-bottom-25">
+		  <div class="panel-heading">
+		  	<li class="fa fa-link"></li>
+		  	<span>Friendship Community</span>
+		  </div>
+		  <!-- List group -->
+		  <ul class="list-group text-center">
+		  	<% ['elixir.png', 'nodejs.png', 'php.png', 'golang.png', 'testerhome.png'].each do |community| %>
+			  	<li class="list-group-item">
+			  		<a href="#">
+			  			<img src="<%= image_url('links/'+community) %>" class="width-130">
+			  		</a>
+			  	</li>
+		  	<% end %>
+		  </ul>
+		</div>
+	</div>
+</section>
+
+<section>
+
+	<div class="col-md-12">
+		<%= render 'front_pages/bottom' %>
+	</div>
+	
+</section>

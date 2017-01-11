@@ -1,0 +1,44 @@
+<%= form_for @post, html: { class: "form-horizontal", id: "edit_post_45" } do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, class: 'col-md-2 control-label', for: 'title' %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, class: 'form-control', id: 'title', placaholder: 'title' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :category, class: 'col-md-2 control-label', for: 'category' %>
+    <div class="col-sm-10">
+      <%= f.text_field :category, class: 'form-control', id: 'category', placaholder: 'category' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content, class: 'col-md-2 control-label', for: 'content' %>
+    <div class="col-sm-10">
+      <%= f.text_field :content, class: 'form-control', id: 'content', placaholder: 'content' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :likes, class: 'col-md-2 control-label', for: 'likes' %>
+    <div class="col-sm-10">
+      <%= f.text_field :likes, class: 'form-control', id: 'likes', placaholder: 'likes' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit 'Save', class: 'btn btn-success' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+<%= stylesheet_link_tag'posts' %>
+
+<% if notice %>
+	<div class="alert alert-warning alert-dismissible" role="alert">
+	  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	  <p id="notice">
+	  	<strong><li class="fa fa-tag"></li>Tips:</strong><%= notice %>
+	  </p>
+	</div>
+<% end %>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="pull-left col-md-2">
+				<h5>
+					POST
+				</h5>
+			</div>
+
+			<div class="pull-right col-md-2">
+				<div class="btn-group">
+					<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
+					<%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-body padding-0">
+		<table class="table table-hover bg-white">
+			<thead>
+				<tr>
+					<th>Feild Name</th>
+					<th>Content</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Title</td>
+					<td><%= @post.title %></td>
+				</tr>
+				<tr>
+					<td>Category</td>
+					<td><%= @post.category %></td>
+				</tr>
+				<tr>
+					<td>Content</td>
+					<td><%= @post.content %></td>
+				</tr>
+				<tr>
+					<td>Likes</td>
+					<td><%= @post.likes %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
