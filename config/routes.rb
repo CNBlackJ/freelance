@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :categories
   get 'like/show'
 
   get 'like/create'
