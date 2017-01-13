@@ -41,9 +41,9 @@
 		<h3 class="discuss-title">Discuss</h3>
 		<div>
 			<ul class="list-group">
-				<% @discuss_titles.each do |title| %>
+				<% @discuss_titles.each do |id, title| %>
 				  <li class="list-group-item">
-				  	<a href="#"><%= title %></a>
+				    <%= link_to title, discuss_path(id) %>
 				  </li>
 			    <% end %>
 			</ul>

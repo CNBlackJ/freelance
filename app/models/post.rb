@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   
   def self.titles
-  	self.pluck(:title)
+  	self.pluck(:id, :title)
   end
 end

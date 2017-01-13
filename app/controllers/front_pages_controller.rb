@@ -7,6 +7,7 @@ class FrontPagesController < ApplicationController
   end
 
   def discuss
+    @discuss = Post.find(params[:id])
   end
 
   def teams

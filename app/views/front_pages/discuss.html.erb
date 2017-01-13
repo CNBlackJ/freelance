@@ -14,18 +14,11 @@
 
 			<div class="padding-12">
 				<h3>
-					Python爬虫实战入门一：工具准备
+					<%= @discuss.title %>
 				</h3>
 				<blockquote>
 					<p>
-						不需要过多过深的Python知识，仅此而已。
-						个人推荐《Python简明教程》http://www.kuqin.com/abyteofpython_cn/、Python官方的《Python教程》http://python.usyiyi.cn/translate/python_352/tutorial/index.html
-						如果需要PDF版Python入门资料，可以关注我的微信公众号：州的先生，回复关键字：python入门资料
-
-						作者：Lerther
-						链接：https://zhuanlan.zhihu.com/p/24706729
-						来源：知乎
-						著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+						<%= @discuss.content %>
 					</p>
 				</blockquote>
 				<div>
@@ -59,10 +52,10 @@
 					<div class="text-center">
 						<div>
 							<a href="#" class="btn">
-								<li class="fa fa-heart-o fa-5 padding-bottom-10"></li>						
+								<li class="fa fa-heart-o fa-5 padding-bottom-10"></li>	
 							</a>
 							<br>
-							<span>10 LIKES</span>
+							<span><%= @discuss.likes %> LIKES</span>
 						</div>
 						<br>					
 						<a href="#" class="btn btn-default btn-focus">
