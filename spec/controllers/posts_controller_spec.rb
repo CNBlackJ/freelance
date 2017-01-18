@@ -86,11 +86,11 @@ RSpec.describe PostsController, type: :controller do
          :updated_at=>'2017-01-17 06:57:12 +0800'}
       }
 
-      xit "updates the requested post" do
+      it "updates the requested post" do
         post = Post.create! valid_attributes
         expect{
           put :update, params: {id: post.to_param, post: new_attributes}
-          }.to change{Post.count}.by 1
+          }.to change{Post.count}.by 0
       end
 
       it "assigns the requested post as @post" do
