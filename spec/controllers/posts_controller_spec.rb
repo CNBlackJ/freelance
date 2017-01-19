@@ -79,7 +79,7 @@ RSpec.describe PostsController, type: :controller do
       let(:new_attributes) {
         {
          :title=>"Voluptatem pariatur sit ut consequatur repudiandae.",
-         :category=>"1,2,3",
+         :categories=>"1,2,3",
          :content=>"Commodi ipsam eum. Ut porro fugit. Provident nobis quas alias voluptas.",
          :likes=>141,
          :created_at=>'2017-01-17 06:57:12 +0800',

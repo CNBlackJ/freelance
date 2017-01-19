@@ -5,11 +5,9 @@
 	<div class="col-md-10 margin-bottom-20">
 		<div class="bg-white">
 			<div class="padding-12">
-				<span class="label label-primary label-extend">School</span>
-				<span class="label label-primary label-extend">Information(IT)</span>
-				<span class="label label-primary label-extend">Research</span>
-				<span class="label label-primary label-extend">Part-time-job</span>
-				<span class="label label-primary label-extend">Phone</span>
+				<% @categories.each do |cat| %>
+					<span class="label label-primary label-extend"><%= cat %></span>
+				<% end %>
 			</div>
 
 			<div class="padding-12">
