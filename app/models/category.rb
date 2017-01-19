@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-
-  enum type: { post: 0, job: 1 }
-
+  
+  validates_presence_of :cat_key, :cat_name
+  validates_numericality_of :cat_key, only_integer: true
 end
