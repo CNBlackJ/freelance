@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :categories
   get 'like/show'
 
   get 'like/create'
@@ -13,7 +12,8 @@ Rails.application.routes.draw do
   get 'front_pages/jobs'
 
   scope '/admin' do
-	resources :posts
+	  resources :posts
+    resources :categories
   end
   devise_for :users, controllers: {
     sessions: 'users/sessions'
